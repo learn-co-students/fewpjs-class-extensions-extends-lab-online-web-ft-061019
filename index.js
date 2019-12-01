@@ -11,7 +11,7 @@ class Polygon {
 
     get perimeter(){
         let totalPerimeter = 0;
-        for (let i = 0; i < this.sides.length; i++){
+        for (let i = 0; i < this.countSides; i++){
             let side = this.sides[i];
             totalPerimeter += side;
         }
@@ -21,7 +21,7 @@ class Polygon {
 
 class Square extends Polygon {
     get isValid(){
-        if (this.sides.length !== 4){
+        if (this.countSides !== 4){
             return;
         }
 
@@ -43,7 +43,7 @@ class Square extends Polygon {
 
 class Triangle extends Polygon {
     get isValid(){
-        if (this.sides.length !== 3){
+        if (this.countSides !== 3){
             return;
         }
 
